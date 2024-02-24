@@ -8,6 +8,7 @@ import Cdmx from './Componentes/Pages/Cdmx';
 import Nacional from './Componentes/Pages/Nacional';
 import Footer from './Componentes/Footer';
 import Opinion from './Componentes/Pages/Opinion';
+import Boletin from './Componentes/Boletin';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/Nacional" element={<Nacional />}/>
         <Route path="/Salud" element={<Salud />}/>
         <Route path='/Opinion' element={<Opinion />} />
+        <Route path='/Boletin' element={<Boletin />} />
       </Routes>
       <Footer />
     </>

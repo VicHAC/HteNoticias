@@ -30,7 +30,7 @@ const Navbar = ({ toggle }) => {
         <Link to='/' className='p-4'>
           Inicio
         </Link>
-        <Link to='Cdmx' className='p-4'>
+        <Link to='/Cdmx' className='p-4'>
           Cdmx
         </Link>
         <Link to='/Nacional' className='p-4'>
@@ -39,7 +39,7 @@ const Navbar = ({ toggle }) => {
         <Link to='/Salud' className='p-4'>
           Salud
         </Link>
-        <Link to='/HteNoticias/Opinion' className='p-4'>
+        <Link to='/Opinion' className='p-4'>
           Opinion
         </Link>
       </div>
