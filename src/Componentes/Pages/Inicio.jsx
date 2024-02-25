@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import NoticiaPrincipal from '../NoticiaPrincipal'
 
 function Inicio() {
+    const tituloNoticia = 'La CDMX debe aplicar la estrategia de seguridad "blindar" que implementó Santiago Taboada en Benito Juárez: Lía Limón';
     const rutaImagen = 'seguridadLiaLimon.jpeg';
-    const rutaHTML = 'SeguridadLiaLimon.html';
+    const rutaHtml = 'SeguridadLiaLimon.html';
 
   return (
     <div className=''>
         <div className='flex flex-col items-center pt-4 '>
             
             <div className='lg:w-3/5 md:w-5/6 md:h-96 w-full h-56 md:px-0 px-4 pb-2'>
-                <Link to='/Boletin' state={{ imagen: rutaImagen, html: rutaHTML }}>
+                <Link to='/Boletin' state={{ titulo: tituloNoticia, imagen: rutaImagen, html: rutaHtml }}>
                     <NoticiaPrincipal imagen="seguridadLiaLimon.jpeg" titulo="Seguridad Lia Limon"/>
                 </Link>
             </div>

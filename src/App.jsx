@@ -10,7 +10,6 @@ import Footer from './Componentes/Footer';
 import Opinion from './Componentes/Pages/Opinion';
 import Boletin from './Componentes/Boletin';
 
-
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
