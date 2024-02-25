@@ -21,10 +21,14 @@ function Boletin() {
     <div className='flex flex-col items-center'>
       <div className='lg:w-3/4 md:w-5/6 md:px-0 px-2'>
         <div className='py-4'>
-          <h1 className='text-2xl text-justify'>{titulo}</h1>
+          <h1 className='md:text-3xl text-2xl text-justify font-bold'>{titulo}</h1>
         </div>
-        <div className=''>
-          <img src={rutaImagen} alt={titulo} />
+        <div className='w-full h-96 overflow-hidden'>
+          <img 
+            className="w-full h-full object-cover"
+            src={rutaImagen}
+            alt="imagen"
+          />
         </div>
         <div className='py-4'>
           <HeadlessHtmlComponent filePath={rutaHtml} />

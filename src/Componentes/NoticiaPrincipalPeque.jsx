@@ -5,7 +5,7 @@ function NoticiaPrincipal({ imagen, titulo }) {
     <div className='w-full h-full flex flex-col items-center border border-solid border-gray-500 shadow rounded hover:brightness-50 transition duration-300'>
       <div className='w-full h-full overflow-hidden'>
         <img
-          className='w-full md:h-full h-52 object-cover'
+          className='w-full md:h-52 h-52 object-cover'
           src={`${imagen}`}
           alt='Descripción de la imagen'
         />
