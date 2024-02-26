@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import HeadlessHtmlComponent from './HeadlessHtmlComponent';
 
 function Boletin() {
-  const location = useLocation();
   const [titulo, setTitulo] = useState('');
   const [rutaImagen, setRutaImagen] = useState('');
   const [rutaHtml, setRutaHtml] = useState('');
 
   useEffect(() => {
-    // Verifica si existe el estado en la ubicación antes de intentar acceder a sus propiedades
-    if (location.state) {
-      setTitulo(location.state.titulo);
-      setRutaImagen(location.state.imagen);
-      setRutaHtml(location.state.html);
-    }
-  }, [location.state]);
+  const params = new URLSearchParams(window.location.search);
+  const titulo = params.get('T');
+  const imagen = params.get('I');
+  const html = params.get('H');
+
+  setTitulo(titulo);
+  setRutaImagen(imagen);
+  setRutaHtml(html);
+}, []);
 
   return (
     <div className='flex flex-col items-center'>
@@ -26,12 +26,12 @@ function Boletin() {
         <div className='w-full h-96 overflow-hidden'>
           <img 
             className="w-full h-full object-cover"
-            src={rutaImagen}
+            src={`/${rutaImagen}.jpeg`}
             alt="imagen"
           />
         </div>
         <div className='py-4'>
-          <HeadlessHtmlComponent filePath={rutaHtml} />
+          <HeadlessHtmlComponent filePath={`/${rutaHtml}.html`} />
         </div>
       </div>
     </div>

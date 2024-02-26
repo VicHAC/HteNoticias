@@ -8,7 +8,7 @@ function NoticiaGeneral({imagen, titulo, descripcion}) {
             <div className="md:w-4/6 h-56">
                 <img 
                     className="w-full h-full object-cover"
-                    src={imagen}
+                    src={`${imagen}.jpeg`}
                     alt="imagen"
                 />
             </div>

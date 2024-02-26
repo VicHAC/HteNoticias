@@ -9,6 +9,7 @@ import Nacional from './Componentes/Pages/Nacional';
 import Footer from './Componentes/Footer';
 import Opinion from './Componentes/Pages/Opinion';
 import Boletin from './Componentes/Boletin';
+import NotFound from './Componentes/NotFound';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,8 @@ function App() {
         <Route path="/Nacional" element={<Nacional />}/>
         <Route path="/Salud" element={<Salud />}/>
         <Route path='/Opinion' element={<Opinion />} />
-        <Route path='/Boletin' element={<Boletin />} />
+        <Route path='/Boletin/:id' element={<Boletin />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

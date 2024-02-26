@@ -6,27 +6,54 @@ import NoticiaGeneral from '../NoticiaGeneral';
 
 function Inicio() {
     const tituloNoticiaG = 'La CDMX debe aplicar la estrategia de seguridad "blindar" que implementó Santiago Taboada en Benito Juárez: Lía Limón';
-    const rutaImagenG = 'seguridadLiaLimon.jpeg';
-    const rutaHtmlG = 'SeguridadLiaLimon.html';
+    const rutaImagenG = 'seguridadLiaLimon';
+    const rutaHtmlG = 'SeguridadLiaLimon';
+    const idNoticia = '1';
 
     const tituloNoticiaI = "Organizaciones anti taurinos reclaman avanzar con dictamen que prohíbe esta práctica en CDMX";
-    const rutaImagenI = "organizacionesAntitaurinos.jpeg";
-    const rutaHtmlI = "OrganizacionesAntitaurinos.html";
+    const rutaImagenI = "organizacionesAntitaurinos";
+    const rutaHtmlI = "OrganizacionesAntitaurinos";
 
     const tituloNoticiaC = "Lineamientos garantizan en el PJCDMX respeto a derechos humanos de indígenas";
-    const rutaImagenC = "lineamientosRespeto.jpeg";
-    const rutaHtmlC = "LineamientosRespeto.html";
+    const rutaImagenC = "lineamientosRespeto";
+    const rutaHtmlC = "LineamientosRespeto";
 
     const tituloNoticiaD = "Se Registra Octavio Rivero Como Candidato de MORENA a la Alcaldía de Milpa Alta";
-    const rutaImagenD = "registraOctavio.jpeg";
-    const rutaHtmlD = "RegistraOctavio.html";
+    const rutaImagenD = "registraOctavio";
+    const rutaHtmlD = "RegistraOctavio";
 
 
     const tituloNoticiaG1 = "Solicita PAN conocer déficit de tarjetas inteligentes en el Metro";
-    const rutaImagenG1 = "deficitTarjetasMetro.jpeg";
-    const rutaHtmlG1 = "DeficitTarjetasMetro.html";
+    const rutaImagenG1 = "deficitTarjetasMetro";
+    const rutaHtmlG1 = "DeficitTarjetasMetro";
     const descripcionG1 = "Legisladores del PAN cuestionan la falta de tarjetas recargables en el Metro, atribuyendo problemas a decisiones apresuradas del Gobierno de MORENA y exigen transparencia y mejoras en el servicio.";
 
+
+ /*######################## COSAS RARAS ###############################################*/   
+    const queryParamsG = new URLSearchParams();
+    queryParamsG.append('T', tituloNoticiaG);
+    queryParamsG.append('I', rutaImagenG);
+    queryParamsG.append('H', rutaHtmlG);
+
+    const queryParamsI = new URLSearchParams();
+    queryParamsI.append('T', tituloNoticiaI);
+    queryParamsI.append('I', rutaImagenI);
+    queryParamsI.append('H', rutaHtmlI);
+    
+    const queryParamsC = new URLSearchParams();
+    queryParamsC.append('T', tituloNoticiaC);
+    queryParamsC.append('I', rutaImagenC);
+    queryParamsC.append('H', rutaHtmlC);
+
+    const queryParamsD = new URLSearchParams();
+    queryParamsD.append('T', tituloNoticiaD);
+    queryParamsD.append('I', rutaImagenD);
+    queryParamsD.append('H', rutaHtmlD);
+
+    const queryParamsG1 = new URLSearchParams();
+    queryParamsG1.append('T', tituloNoticiaG1);
+    queryParamsG1.append('I', rutaImagenG1);
+    queryParamsG1.append('H', rutaHtmlG1);
   return (
     <div className=''>
         <div className='flex flex-col items-center pt-4 '>
@@ -34,7 +61,7 @@ function Inicio() {
 {/* ################################# NOTICIA PRINCIPAL GRANDE ################################# */}           
             
             <div className='lg:w-3/5 md:w-5/6 md:h-96 w-full h-auto md:px-0 px-2 pb-2'>
-                <Link to='/Boletin' state={{ titulo: tituloNoticiaG, imagen: rutaImagenG, html: rutaHtmlG }}>
+                <Link to={`/Boletin/${idNoticia}?${queryParamsG.toString()}`}>
                     <NoticiaPrincipal imagen={rutaImagenG} titulo={tituloNoticiaG} />
                 </Link>
             </div>
@@ -43,17 +70,17 @@ function Inicio() {
             
             <div className='md:flex lg:w-3/5 md:w-5/6 md:h-auto w-full md:space-x-2 md:px-0 px-2 md:pb-8 pb-4'>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to='/Boletin' state={{ titulo: tituloNoticiaI, imagen: rutaImagenI, html: rutaHtmlI }}>
+                <Link to={`/Boletin/${idNoticia}?${queryParamsI.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenI} titulo={tituloNoticiaI}/>
                 </Link>                
                 </div>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to='/Boletin' state={{ titulo: tituloNoticiaC, imagen: rutaImagenC, html: rutaHtmlC }}>
+                <Link to={`/Boletin/${idNoticia}?${queryParamsC.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenC} titulo={tituloNoticiaC}/>
                 </Link>                
                 </div>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to='/Boletin' state={{ titulo: tituloNoticiaD, imagen: rutaImagenD, html: rutaHtmlD }}>
+                <Link to={`/Boletin/${idNoticia}?${queryParamsD.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenD} titulo={tituloNoticiaD}/>
                 </Link>
                 </div>
@@ -61,11 +88,11 @@ function Inicio() {
 
 {/* ################################# NOTICIAS GENERALES ################################# */}
             <div className='pb-4 lg:w-3/4 md:w-5/6'>
-            <div className='md:px-0 px-2'>
-            <Link to='/Boletin' state={{ titulo: tituloNoticiaG1, imagen: rutaImagenG1, html: rutaHtmlG1 }}>
-                <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} descripcion={descripcionG1}/>
-            </Link>
-            </div>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Boletin/${idNoticia}?${queryParamsG1.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} descripcion={descripcionG1}/>
+                </Link>
+                </div>
             </div>
         </div>
     </div>
