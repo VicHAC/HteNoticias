@@ -7,15 +7,22 @@ function Boletin() {
   const [rutaHtml, setRutaHtml] = useState('');
 
   useEffect(() => {
-  const params = new URLSearchParams(window.location.search);
-  const titulo = params.get('T');
-  const imagen = params.get('I');
-  const html = params.get('H');
+    // Obtén la parte de la URL después del hash (#)
+    const hashParams = window.location.hash.split('?')[1];
+    const params = new URLSearchParams(hashParams);
 
-  setTitulo(titulo);
-  setRutaImagen(imagen);
-  setRutaHtml(html);
-}, []);
+    const titulo = params.get('T');
+    const imagen = params.get('I');
+    const html = params.get('H');
+
+    console.log(titulo)
+    console.log(imagen)
+    console.log(html)
+
+    setTitulo(titulo);
+    setRutaImagen(imagen);
+    setRutaHtml(html);
+  }, []);
 
   return (
     <div className='flex flex-col items-center'>

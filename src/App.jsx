@@ -37,15 +37,15 @@ function App() {
     <>
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Routes>
-        <Route path="/" element={<Inicio />}/>
-        <Route path="/Cdmx" element={<Cdmx />}/>
-        <Route path="/Nacional" element={<Nacional />}/>
-        <Route path="/Salud" element={<Salud />}/>
-        <Route path='/Opinion' element={<Opinion />} />
-        <Route path='/Boletin/:id' element={<Boletin />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Inicio />}/>
+          <Route path="/Cdmx" element={<Cdmx />}/>
+          <Route path="/Nacional" element={<Nacional />}/>
+          <Route path="/Salud" element={<Salud />}/>
+          <Route path='/Opinion' element={<Opinion />} />
+          <Route path='/Boletin/:id' element={<Boletin />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       <Footer />
     </>
   );
