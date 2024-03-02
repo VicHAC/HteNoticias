@@ -22,7 +22,7 @@ const HeadlessHtmlComponent = ({ filePath }) => {
   }, [filePath]);
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <div className="text-base font-serif text-gray-800 leading-6" dangerouslySetInnerHTML={{ __html: htmlContent }} />
   );
 };
 

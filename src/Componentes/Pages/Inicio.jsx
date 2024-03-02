@@ -26,8 +26,6 @@ function Inicio() {
     const tituloNoticiaG1 = "Solicita PAN conocer déficit de tarjetas inteligentes en el Metro";
     const rutaImagenG1 = "deficitTarjetasMetro";
     const rutaHtmlG1 = "DeficitTarjetasMetro";
-    const descripcionG1 = "Legisladores del PAN cuestionan la falta de tarjetas recargables en el Metro, atribuyendo problemas a decisiones apresuradas del Gobierno de MORENA y exigen transparencia y mejoras en el servicio.";
-
 
  /*######################## COSAS RARAS ###############################################*/   
     const queryParamsG = new URLSearchParams();
@@ -90,7 +88,7 @@ function Inicio() {
             <div className='pb-4 lg:w-3/4 md:w-5/6'>
                 <div className='md:px-0 px-2'>
                 <Link to={`/Boletin/${idNoticia}?${queryParamsG1.toString()}`}>
-                    <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} descripcion={descripcionG1}/>
+                    <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1}/>
                 </Link>
                 </div>
             </div>
