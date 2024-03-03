@@ -16,7 +16,7 @@ function NoticiaGeneral({ imagen, titulo, rutaHtml }) {
         </div>
         <div className="md:px-2 items-center w-full">
           <h1 className='md:text-2xl text-lg font-bold'>{titulo}</h1>
-          <div className="text-justify font-mono lg:h-28 md:h-20 h-16 overflow-hidden">
+          <div className="text-justify font-mono text-gray-800 lg:h-28 md:h-20 h-16 overflow-hidden">
             <HeadlessHtmlComponent filePath={`Bol/${rutaHtml}.html`} />
           </div>
             <p className="text-blue-700 cursor-pointer">

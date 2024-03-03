@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HeadlessHtmlComponent from './HeadlessHtmlComponent';
 
-function Boletin() {
+function Nota() {
   const [titulo, setTitulo] = useState('');
   const [rutaImagen, setRutaImagen] = useState('');
   const [rutaHtml, setRutaHtml] = useState('');
@@ -37,7 +37,7 @@ function Boletin() {
             alt="imagen"
           />
         </div>
-        <div className='py-4'>
+        <div className='py-4 font-mono text-justify'>
           <HeadlessHtmlComponent filePath={`Bol/${rutaHtml}.html`} />
         </div>
       </div>
@@ -45,4 +45,4 @@ function Boletin() {
   );
 }
 
-export default Boletin;
+export default Nota;

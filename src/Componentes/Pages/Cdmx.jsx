@@ -21,6 +21,14 @@ function Cdmx() {
     const rutaImagenG4 = "C4AnaVillagran";
     const rutaHtmlG4 = "C4AnaVillagran";
 
+    const tituloNoticiaG5 = "Registra PRD CDMX a Rita Contreras Ocampo como su candidata al Distrito 12 local de la Alcaldía Cuauhtémoc";
+    const rutaImagenG5 = "C5RitaContreras";
+    const rutaHtmlG5 = "C5RitaContreras";
+
+    const tituloNoticiaG6 = "La comunidad de Azcapotzalco respalda a la Doctora Claudia Sheinbaum rumbo a la Presidencia de México";
+    const rutaImagenG6 = "C6AzcapotzalcoClaudia";
+    const rutaHtmlG6 = "C6AzcapotzalcoClaudia";
+
     const queryParamsG1 = new URLSearchParams();
     queryParamsG1.append('T', tituloNoticiaG1);
     queryParamsG1.append('I', rutaImagenG1);
@@ -41,6 +49,16 @@ function Cdmx() {
     queryParamsG4.append('I', rutaImagenG4);
     queryParamsG4.append('H', rutaHtmlG4);
 
+    const queryParamsG5 = new URLSearchParams();
+    queryParamsG5.append('T', tituloNoticiaG5);
+    queryParamsG5.append('I', rutaImagenG5);
+    queryParamsG5.append('H', rutaHtmlG5);
+
+    const queryParamsG6 = new URLSearchParams();
+    queryParamsG6.append('T', tituloNoticiaG6);
+    queryParamsG6.append('I', rutaImagenG6);
+    queryParamsG6.append('H', rutaHtmlG6);
+
   return (
     <div>
       <div className='flex flex-col items-center pt-4'>
@@ -49,22 +67,32 @@ function Cdmx() {
         </div>
         <div className='pb-4 lg:w-3/4 md:w-5/6'>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG4.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG6.toString()}`}>
+                <NoticiaGeneral imagen={rutaImagenG6} titulo={tituloNoticiaG6} rutaHtml={rutaHtmlG6}/>
+            </Link>
+            </div>
+            <div className='md:px-0 px-2'>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG5.toString()}`}>
+                <NoticiaGeneral imagen={rutaImagenG5} titulo={tituloNoticiaG5} rutaHtml={rutaHtmlG5}/>
+            </Link>
+            </div>
+            <div className='md:px-0 px-2'>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG4.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG4} titulo={tituloNoticiaG4} rutaHtml={rutaHtmlG4}/>
             </Link>
             </div>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG3.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG3.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG3} titulo={tituloNoticiaG3} rutaHtml={rutaHtmlG3}/>
             </Link>
             </div>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG2.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG2.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG2} titulo={tituloNoticiaG2} rutaHtml={rutaHtmlG2}/>
             </Link>
             </div>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG1.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG1.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1}/>
             </Link>
             </div>

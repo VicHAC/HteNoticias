@@ -59,7 +59,7 @@ function Inicio() {
 {/* ################################# NOTICIA PRINCIPAL GRANDE ################################# */}           
             
             <div className='lg:w-3/5 md:w-5/6 md:h-96 w-full h-auto md:px-0 px-2 pb-2'>
-                <Link to={`/Boletin/${idNoticia}?${queryParamsG.toString()}`}>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG.toString()}`}>
                     <NoticiaPrincipal imagen={rutaImagenG} titulo={tituloNoticiaG} />
                 </Link>
             </div>
@@ -68,17 +68,17 @@ function Inicio() {
             
             <div className='md:flex lg:w-3/5 md:w-5/6 md:h-auto w-full md:space-x-2 md:px-0 px-2 md:pb-8 pb-4'>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to={`/Boletin/${idNoticia}?${queryParamsI.toString()}`}>
+                <Link to={`/Nota/${idNoticia}?${queryParamsI.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenI} titulo={tituloNoticiaI}/>
                 </Link>                
                 </div>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to={`/Boletin/${idNoticia}?${queryParamsC.toString()}`}>
+                <Link to={`/Nota/${idNoticia}?${queryParamsC.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenC} titulo={tituloNoticiaC}/>
                 </Link>                
                 </div>
                 <div className='md:w-1/3 w-full h-auto md:pb-0 pb-2'>
-                <Link to={`/Boletin/${idNoticia}?${queryParamsD.toString()}`}>
+                <Link to={`/Nota/${idNoticia}?${queryParamsD.toString()}`}>
                     <NoticiaPrincipalPeque imagen={rutaImagenD} titulo={tituloNoticiaD}/>
                 </Link>
                 </div>
@@ -87,7 +87,7 @@ function Inicio() {
 {/* ################################# NOTICIAS GENERALES ################################# */}
             <div className='pb-4 lg:w-3/4 md:w-5/6'>
                 <div className='md:px-0 px-2'>
-                <Link to={`/Boletin/${idNoticia}?${queryParamsG1.toString()}`}>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG1.toString()}`}>
                     <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1}/>
                 </Link>
                 </div>
