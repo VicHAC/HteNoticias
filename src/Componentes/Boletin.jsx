@@ -33,12 +33,12 @@ function Boletin() {
         <div className='w-full h-96 overflow-hidden'>
           <img 
             className="w-full h-full object-cover"
-            src={`/${rutaImagen}.jpeg`}
+            src={`Img/${rutaImagen}.jpeg`}
             alt="imagen"
           />
         </div>
         <div className='py-4'>
-          <HeadlessHtmlComponent filePath={`/${rutaHtml}.html`} />
+          <HeadlessHtmlComponent filePath={`Bol/${rutaHtml}.html`} />
         </div>
       </div>
     </div>
