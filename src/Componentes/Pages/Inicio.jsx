@@ -5,27 +5,48 @@ import NoticiaPrincipalPeque from '../NoticiaPrincipalPeque'
 import NoticiaGeneral from '../NoticiaGeneral';
 
 function Inicio() {
-    const tituloNoticiaG = 'La CDMX debe aplicar la estrategia de seguridad "blindar" que implementó Santiago Taboada en Benito Juárez: Lía Limón';
-    const rutaImagenG = 'seguridadLiaLimon';
-    const rutaHtmlG = 'SeguridadLiaLimon';
     const idNoticia = '1';
 
-    const tituloNoticiaI = "Organizaciones anti taurinos reclaman avanzar con dictamen que prohíbe esta práctica en CDMX";
-    const rutaImagenI = "organizacionesAntitaurinos";
-    const rutaHtmlI = "OrganizacionesAntitaurinos";
+    const tituloNoticiaG = "Proyecto de gobierno de Clara Brugada humanista e incluyente: Sebastián Ramírez";
+    const rutaImagenG = "C8SebastianRamirez";
+    const rutaHtmlG = "C8SebastianRamirez";
+    
+    const tituloNoticiaI = "Jóvenes que apoyan a Claudia Sheinbaum presentan la campaña “Por La Primera Presidenta de México”";
+    const rutaImagenI = "C10PrimeraPresidenta";
+    const rutaHtmlI = "C10PrimeraPresidenta";
 
-    const tituloNoticiaC = "Lineamientos garantizan en el PJCDMX respeto a derechos humanos de indígenas";
-    const rutaImagenC = "lineamientosRespeto";
-    const rutaHtmlC = "LineamientosRespeto";
+    const tituloNoticiaC = "La comunidad de Azcapotzalco respalda a la Doctora Claudia Sheinbaum rumbo a la Presidencia de México";
+    const rutaImagenC = "C6AzcapotzalcoClaudia";
+    const rutaHtmlC = "C6AzcapotzalcoClaudia";
 
-    const tituloNoticiaD = "Se Registra Octavio Rivero Como Candidato de MORENA a la Alcaldía de Milpa Alta";
-    const rutaImagenD = "registraOctavio";
-    const rutaHtmlD = "RegistraOctavio";
+    const tituloNoticiaD = "Integra Fernando Mercado equipo de trabajo para la elaboración de proyecto de plan de gobierno en La Magdalena Contreras";
+    const rutaImagenD = "C9Fernando";
+    const rutaHtmlD = "C9Fernando";
 
 
     const tituloNoticiaG1 = "Solicita PAN conocer déficit de tarjetas inteligentes en el Metro";
     const rutaImagenG1 = "deficitTarjetasMetro";
     const rutaHtmlG1 = "DeficitTarjetasMetro";
+
+    const tituloNoticiaG2 = 'La CDMX debe aplicar la estrategia de seguridad "blindar" que implementó Santiago Taboada en Benito Juárez: Lía Limón';
+    const rutaImagenG2 = 'seguridadLiaLimon';
+    const rutaHtmlG2 = 'SeguridadLiaLimon';
+
+    const tituloNoticiaG3 = "Organizaciones anti taurinos reclaman avanzar con dictamen que prohíbe esta práctica en CDMX";
+    const rutaImagenG3 = "organizacionesAntitaurinos";
+    const rutaHtmlG3 = "OrganizacionesAntitaurinos";
+
+    const tituloNoticiaG4 = "Lineamientos garantizan en el PJCDMX respeto a derechos humanos de indígenas";
+    const rutaImagenG4 = "lineamientosRespeto";
+    const rutaHtmlG4 = "LineamientosRespeto";
+
+    const tituloNoticiaG5 = "Se Registra Octavio Rivero Como Candidato de MORENA a la Alcaldía de Milpa Alta";
+    const rutaImagenG5 = "registraOctavio";
+    const rutaHtmlG5 = "RegistraOctavio";
+
+    const tituloNoticiaG6 = "Taboada prioriza en sus ejes de gobierno a las mujeres";
+    const rutaImagenG6 = "C7Taboada";
+    const rutaHtmlG6 = "C7Taboada";
 
  /*######################## COSAS RARAS ###############################################*/   
     const queryParamsG = new URLSearchParams();
@@ -48,10 +69,36 @@ function Inicio() {
     queryParamsD.append('I', rutaImagenD);
     queryParamsD.append('H', rutaHtmlD);
 
+
     const queryParamsG1 = new URLSearchParams();
     queryParamsG1.append('T', tituloNoticiaG1);
     queryParamsG1.append('I', rutaImagenG1);
     queryParamsG1.append('H', rutaHtmlG1);
+
+    const queryParamsG2 = new URLSearchParams();
+    queryParamsG2.append('T', tituloNoticiaG2);
+    queryParamsG2.append('I', rutaImagenG2);
+    queryParamsG2.append('H', rutaHtmlG2);
+
+    const queryParamsG3 = new URLSearchParams();
+    queryParamsG3.append('T', tituloNoticiaG3);
+    queryParamsG3.append('I', rutaImagenG3);
+    queryParamsG3.append('H', rutaHtmlG3);
+
+    const queryParamsG4 = new URLSearchParams();
+    queryParamsG4.append('T', tituloNoticiaG4);
+    queryParamsG4.append('I', rutaImagenG4);
+    queryParamsG4.append('H', rutaHtmlG4);
+
+    const queryParamsG5 = new URLSearchParams();
+    queryParamsG5.append('T', tituloNoticiaG5);
+    queryParamsG5.append('I', rutaImagenG5);
+    queryParamsG5.append('H', rutaHtmlG5);
+
+    const queryParamsG6 = new URLSearchParams();
+    queryParamsG6.append('T', tituloNoticiaG6);
+    queryParamsG6.append('I', rutaImagenG6);
+    queryParamsG6.append('H', rutaHtmlG6);
   return (
     <div className=''>
         <div className='flex flex-col items-center pt-4 '>
@@ -86,6 +133,31 @@ function Inicio() {
 
 {/* ################################# NOTICIAS GENERALES ################################# */}
             <div className='pb-4 lg:w-3/4 md:w-5/6'>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG6.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG6} titulo={tituloNoticiaG6} rutaHtml={rutaHtmlG6}/>
+                </Link>
+                </div>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG5.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG5} titulo={tituloNoticiaG5} rutaHtml={rutaHtmlG5}/>
+                </Link>
+                </div>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG4.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG4} titulo={tituloNoticiaG4} rutaHtml={rutaHtmlG4}/>
+                </Link>
+                </div>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG3.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG3} titulo={tituloNoticiaG3} rutaHtml={rutaHtmlG3}/>
+                </Link>
+                </div>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG2.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG2} titulo={tituloNoticiaG2} rutaHtml={rutaHtmlG2}/>
+                </Link>
+                </div>
                 <div className='md:px-0 px-2'>
                 <Link to={`/Nota/${idNoticia}?${queryParamsG1.toString()}`}>
                     <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1}/>

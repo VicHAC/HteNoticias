@@ -5,6 +5,7 @@ function Nota() {
   const [titulo, setTitulo] = useState('');
   const [rutaImagen, setRutaImagen] = useState('');
   const [rutaHtml, setRutaHtml] = useState('');
+  const [fecha, setFecha] = useState(null); // Nuevo estado para la fecha
 
   useEffect(() => {
     // Obtén la parte de la URL después del hash (#)
@@ -14,14 +15,12 @@ function Nota() {
     const titulo = params.get('T');
     const imagen = params.get('I');
     const html = params.get('H');
-
-    console.log(titulo)
-    console.log(imagen)
-    console.log(html)
+    const fechaParam = params.get('F');
 
     setTitulo(titulo);
     setRutaImagen(imagen);
     setRutaHtml(html);
+    setFecha(fechaParam); 
   }, []);
 
   return (
@@ -29,6 +28,14 @@ function Nota() {
       <div className='lg:w-3/4 md:w-5/6 md:px-0 px-2'>
         <div className='py-4'>
           <h1 className='md:text-3xl text-2xl text-justify font-bold'>{titulo}</h1>
+        </div>
+        <div className='flex justify-between'>
+          <div>
+            <h2 className='text-left'>Foto: Cortesia</h2>
+          </div>
+          <div className='text-right'>
+            {fecha && <div>{fecha}</div>}
+          </div>
         </div>
         <div className='w-full h-96 overflow-hidden'>
           <img 

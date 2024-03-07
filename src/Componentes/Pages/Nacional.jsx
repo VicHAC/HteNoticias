@@ -32,12 +32,12 @@ function Nacional() {
         </div>
         <div className='pb-4 lg:w-3/4 md:w-5/6'>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG2.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG2.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG2} titulo={tituloNoticiaG2} rutaHtml={rutaHtmlG2}/>
             </Link>
             </div>
             <div className='md:px-0 px-2'>
-            <Link to={`/Boletin/${idNoticia}?${queryParamsG1.toString()}`}>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG1.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG1} titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1}/>
             </Link>
             </div>
