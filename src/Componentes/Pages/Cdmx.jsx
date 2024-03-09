@@ -50,6 +50,11 @@ function Cdmx() {
     const rutaHtmlG11 = "C11BajaDiputados";
     const fechaG11 = "29 de Febrero 2024";
 
+    const tituloNoticiaG12 = "Demandan a Santiago Taboada acciones para frenar y prevenir todo tipo de violencia hacia las mujeres";
+    const rutaImagenG12 = "C12DemandanSantiago";
+    const rutaHtmlG12 = "C12DemandanSantiago";
+    const fechaG12 = "8 de Marzo de 2024";
+
     const queryParamsG1 = new URLSearchParams();
     queryParamsG1.append('T', tituloNoticiaG1);
     queryParamsG1.append('I', rutaImagenG1);
@@ -106,6 +111,12 @@ function Cdmx() {
     queryParamsG11.append('H', rutaHtmlG11);
     queryParamsG11.append('F', fechaG11)
 
+    const queryParamsG12 = new URLSearchParams();
+    queryParamsG12.append('T', tituloNoticiaG12);
+    queryParamsG12.append('I', rutaImagenG12);
+    queryParamsG12.append('H', rutaHtmlG12);
+    queryParamsG12.append('F', fechaG12)
+
   return (
     <div>
       <div className='flex flex-col items-center pt-4'>
@@ -113,6 +124,11 @@ function Cdmx() {
           <h1 className='text-5xl pb-4'>CDMX</h1>
         </div>
         <div className='pb-4 lg:w-3/4 md:w-5/6'>
+            <div className='md:px-0 px-2'>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG12.toString()}`}>
+                <NoticiaGeneral imagen={rutaImagenG12} titulo={tituloNoticiaG12} rutaHtml={rutaHtmlG12}/>
+            </Link>
+            </div>
             <div className='md:px-0 px-2'>
             <Link to={`/Nota/${idNoticia}?${queryParamsG11.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG11} titulo={tituloNoticiaG11} rutaHtml={rutaHtmlG11}/>
