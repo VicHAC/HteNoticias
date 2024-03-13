@@ -7,21 +7,25 @@ import NoticiaGeneral from '../NoticiaGeneral';
 function Inicio() {
     const idNoticia = '1';
 
-    const tituloNoticiaG = "Proyecto de gobierno de Clara Brugada humanista e incluyente: Sebastián Ramírez";
-    const rutaImagenG = "C8SebastianRamirez";
-    const rutaHtmlG = "C8SebastianRamirez";
+    const tituloNoticiaG = "Vamos por más democracia, por más libertades y más justicia para el pueblo de México: Claudia Sheinbaum desde San Pedro Cholula, Puebla";
+    const rutaImagenG = "N3Claudia";
+    const rutaHtmlG = "N3Claudia";
+    const fechaG = "10 de Marzo de 2024";
     
     const tituloNoticiaI = "Jóvenes que apoyan a Claudia Sheinbaum presentan la campaña “Por La Primera Presidenta de México”";
     const rutaImagenI = "C10PrimeraPresidenta";
     const rutaHtmlI = "C10PrimeraPresidenta";
+    const fechaI = "";
 
     const tituloNoticiaC = "La comunidad de Azcapotzalco respalda a la Doctora Claudia Sheinbaum rumbo a la Presidencia de México";
     const rutaImagenC = "C6AzcapotzalcoClaudia";
     const rutaHtmlC = "C6AzcapotzalcoClaudia";
+    const fechaC = "";
 
     const tituloNoticiaD = "Integra Fernando Mercado equipo de trabajo para la elaboración de proyecto de plan de gobierno en La Magdalena Contreras";
     const rutaImagenD = "C9Fernando";
     const rutaHtmlD = "C9Fernando";
+    const fechaD = "";
 
 
     const tituloNoticiaG1 = "Solicita PAN conocer déficit de tarjetas inteligentes en el Metro";
@@ -48,26 +52,34 @@ function Inicio() {
     const rutaImagenG6 = "C7Taboada";
     const rutaHtmlG6 = "C7Taboada";
 
+    const tituloNoticiaG7 = "Proyecto de gobierno de Clara Brugada humanista e incluyente: Sebastián Ramírez";
+    const rutaImagenG7 = "C8SebastianRamirez";
+    const rutaHtmlG7 = "C8SebastianRamirez";
+
  /*######################## COSAS RARAS ###############################################*/   
     const queryParamsG = new URLSearchParams();
     queryParamsG.append('T', tituloNoticiaG);
     queryParamsG.append('I', rutaImagenG);
     queryParamsG.append('H', rutaHtmlG);
+    queryParamsG.append('F', fechaG)
 
     const queryParamsI = new URLSearchParams();
     queryParamsI.append('T', tituloNoticiaI);
     queryParamsI.append('I', rutaImagenI);
     queryParamsI.append('H', rutaHtmlI);
+    queryParamsI.append('F', fechaI)
     
     const queryParamsC = new URLSearchParams();
     queryParamsC.append('T', tituloNoticiaC);
     queryParamsC.append('I', rutaImagenC);
     queryParamsC.append('H', rutaHtmlC);
+    queryParamsC.append('F', fechaC)
 
     const queryParamsD = new URLSearchParams();
     queryParamsD.append('T', tituloNoticiaD);
     queryParamsD.append('I', rutaImagenD);
     queryParamsD.append('H', rutaHtmlD);
+    queryParamsD.append('F', fechaD)
 
 
     const queryParamsG1 = new URLSearchParams();
@@ -99,6 +111,11 @@ function Inicio() {
     queryParamsG6.append('T', tituloNoticiaG6);
     queryParamsG6.append('I', rutaImagenG6);
     queryParamsG6.append('H', rutaHtmlG6);
+
+    const queryParamsG7 = new URLSearchParams();
+    queryParamsG7.append('T', tituloNoticiaG7);
+    queryParamsG7.append('I', rutaImagenG7);
+    queryParamsG7.append('H', rutaHtmlG7);
   return (
     <div className=''>
         <div className='flex flex-col items-center pt-4 '>
@@ -133,6 +150,11 @@ function Inicio() {
 
 {/* ################################# NOTICIAS GENERALES ################################# */}
             <div className='pb-4 lg:w-3/4 md:w-5/6'>
+                <div className='md:px-0 px-2'>
+                <Link to={`/Nota/${idNoticia}?${queryParamsG7.toString()}`}>
+                    <NoticiaGeneral imagen={rutaImagenG7} titulo={tituloNoticiaG7} rutaHtml={rutaHtmlG7}/>
+                </Link>
+                </div>
                 <div className='md:px-0 px-2'>
                 <Link to={`/Nota/${idNoticia}?${queryParamsG6.toString()}`}>
                     <NoticiaGeneral imagen={rutaImagenG6} titulo={tituloNoticiaG6} rutaHtml={rutaHtmlG6}/>
