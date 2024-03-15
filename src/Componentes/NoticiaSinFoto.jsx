@@ -22,7 +22,7 @@ function NoticiaSinFoto({ titulo, rutaHtml, nombreColumna, notaAutor, foto }) {
               {notaAutor && <h1 className='text-lg'>Por: {notaAutor}</h1>}
             </div>
           </div>
-          <div className="md:ml-2 ml-auto">
+          <div className="ml-2">
               {foto && 
                 <div className="w-10 rounded overflow-hidden">
                 <img

@@ -60,6 +60,11 @@ function Cdmx() {
     const rutaHtmlG13 = "C13Nancy";
     const fechaG13 = "10 de Marzo de 2024";
 
+    const tituloNoticiaG14 = "GPPRI denuncia clima de violencia preelectoral y agresiones en Cuajimalpa, y responsabiliza a exalcalde Adrián Ruvalcaba";
+    const rutaImagenG14 = "C14GGPRI";
+    const rutaHtmlG14 = "C14GGPRI";
+    const fechaG14 = "14 de Marzo de 2024";
+
     const queryParamsG1 = new URLSearchParams();
     queryParamsG1.append('T', tituloNoticiaG1);
     queryParamsG1.append('I', rutaImagenG1);
@@ -128,6 +133,12 @@ function Cdmx() {
     queryParamsG13.append('H', rutaHtmlG13);
     queryParamsG13.append('F', fechaG13)
 
+    const queryParamsG14 = new URLSearchParams();
+    queryParamsG14.append('T', tituloNoticiaG14);
+    queryParamsG14.append('I', rutaImagenG14);
+    queryParamsG14.append('H', rutaHtmlG14);
+    queryParamsG14.append('F', fechaG14)
+
   return (
     <div>
       <div className='flex flex-col items-center pt-4'>
@@ -135,7 +146,12 @@ function Cdmx() {
           <h1 className='text-5xl pb-4'>CDMX</h1>
         </div>
         <div className='pb-4 lg:w-3/4 md:w-5/6'>
-        <div className='md:px-0 px-2'>
+            <div className='md:px-0 px-2'>
+            <Link to={`/Nota/${idNoticia}?${queryParamsG14.toString()}`}>
+                <NoticiaGeneral imagen={rutaImagenG14} titulo={tituloNoticiaG14} rutaHtml={rutaHtmlG14}/>
+            </Link>
+            </div>
+            <div className='md:px-0 px-2'>
             <Link to={`/Nota/${idNoticia}?${queryParamsG13.toString()}`}>
                 <NoticiaGeneral imagen={rutaImagenG13} titulo={tituloNoticiaG13} rutaHtml={rutaHtmlG13}/>
             </Link>

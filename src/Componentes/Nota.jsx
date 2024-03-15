@@ -38,7 +38,7 @@ function Nota() {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='lg:w-3/4 md:w-5/6 md:px-0 px-2'>
+      <div className='lg:w-3/4 md:w-5/6 md:px-0 px-3'>
         <div className='py-4'>
           <h1 className='md:text-3xl text-2xl text-justify font-bold'>{titulo}</h1>
         </div>
@@ -54,7 +54,7 @@ function Nota() {
               {notaAutor && <h1 className='text-lg'>Por: {notaAutor}</h1>}
             </div>
           </div>
-          <div className="md:ml-2 ml-auto">
+          <div className="ml-2">
               {foto && 
                 <div className="w-10 rounded overflow-hidden">
                 <img
