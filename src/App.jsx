@@ -43,7 +43,7 @@ function App() {
           <Route path="/Nacional" element={<Nacional />}/>
           <Route path="/Salud" element={<Salud />}/>
           <Route path='/Opinion' element={<Opinion />} />
-          <Route path='/Nota/:id' element={<Nota />} />
+          <Route path='/Nota/:id/:titulo' element={<Nota />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer />

@@ -6,7 +6,7 @@ function NoticiaPrincipal({ imagen, titulo }) {
       <div className='w-full h-full overflow-hidden'>
         <img
           className='w-full md:h-full h-52 object-cover'
-          src={`Img/${imagen}.jpeg`}
+          src={`Img/${imagen}`}
           alt='Descripción de la imagen'
         />
       </div>

@@ -1,41 +1,53 @@
-import React from 'react'
-import NoticiaSinFoto from '../NoticiaSinFoto'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import NoticiaSinFoto from '../NoticiaSinFoto';
+import { Link } from 'react-router-dom';
 
 function Opinion() {
-    const idNoticia = '1';
-  
-    const tituloNoticiaG1 = "Programas sociales ¿bandera de la oposición?";
-    const rutaHtmlG1 = "O1ProgramasSociales";
-    const nombreColumnaG1 = "Café con Adorno";
-    const notaAutorG1 = "Raúl Adorno Jiménez";
-    const fotoG1 = "RaulAdorno"
+    const noticias = [
+        {
+            id: 'O1',
+            titulo: 'Programas sociales ¿bandera de la oposición?',
+            texto: "O1",
+            nombreDeLaColumna: "Café con Adorno",
+            autorDeLaNota: "Raúl Adorno Jiménez",
+            fotoDelAutor: "RaulAdorno.jpeg"
+        }
+    ];
+
+    // Función para formatear el título de la noticia para la URL
+    const formatTitleForURL = (title) => {
+        // Reemplazar espacios por guiones
+        let formattedTitle = title.replace(/ /g, '-');
+        // Eliminar acentos
+        formattedTitle = formattedTitle.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        return formattedTitle;
+    };
 
 
-    const queryParamsG1 = new URLSearchParams();
-    queryParamsG1.append('T', tituloNoticiaG1);
-    queryParamsG1.append('H', rutaHtmlG1);
-    queryParamsG1.append('NA', notaAutorG1);
-    queryParamsG1.append('NC', nombreColumnaG1);
-    queryParamsG1.append('Fo', fotoG1);
-
-  return (
-    <div>
-      <div className='flex flex-col items-center pt-4'>
+    return (
         <div>
-          <h1 className='text-5xl pb-4'>Opinion</h1>
-        </div>
-          <div className='pb-4 lg:w-3/4 md:w-5/6'>
-            <div className='md:px-0 px-2'>
-            <Link to={`/Nota/${idNoticia}?${queryParamsG1.toString()}`}>
-                <NoticiaSinFoto titulo={tituloNoticiaG1} rutaHtml={rutaHtmlG1} 
-                nombreColumna={nombreColumnaG1} notaAutor={notaAutorG1} foto={fotoG1}/>
-            </Link>
+            <div className='flex flex-col items-center pt-4'>
+                <div>
+                    <h1 className='text-5xl pb-4'>Opinion</h1>
+                </div>
+                <div className='pb-4 lg:w-3/4 md:w-5/6'>
+                    {noticias.map((noticia, index) => (
+                        <div key={index} className='md:px-0 px-2'>
+                            <Link to={`/Nota/${noticia.id}/${formatTitleForURL(noticia.titulo)}`}>
+                                <NoticiaSinFoto 
+                                    titulo={noticia.titulo} 
+                                    rutaHtml={noticia.texto} 
+                                    nombreColumna={noticia.nombreDeLaColumna} 
+                                    notaAutor={noticia.autorDeLaNota} 
+                                    foto={noticia.fotoDelAutor}
+                                />
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
-      </div>
-    </div>
-  )
+        </div>
+    );
 }
 
-export default Opinion
+export default Opinion;
