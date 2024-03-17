@@ -1,6 +1,7 @@
 import React from 'react';
 import NoticiaGeneral from '../NoticiaGeneral';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Nacional() {
 
@@ -58,6 +59,13 @@ function Nacional() {
 
     return (
         <div>
+            <Helmet>
+                <title>HorizonteNoticias | Nacional</title>
+                <meta name="description" content="Enterate de las últimas noticias desde México. Mantente al tanto de los acontecimientos más relevantes de la política mexicana." />
+                <link rel="canonical" href="https://www.horizontenoticias.com.mx/#/Nacional" />
+                <meta property="og:url" content="https://www.horizontenoticias.com.mx/#/Nacional" />
+                <meta name="keywords" content="noticias, actualidad, información, México, política, congreso, nacional, elecciones, gobierno, sociedad, economía, sociedad, cultura, educación, salud, medio ambiente, seguridad, desarrollo, opinión, análisis, Claudia Sheinbaum, Xochitl Galvez" />
+             </Helmet>
             <div className='flex flex-col items-center pt-4'>
                 <div>
                     <h1 className='text-5xl pb-4'>Nacional</h1>

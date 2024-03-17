@@ -1,6 +1,7 @@
 import React from 'react';
 import NoticiaSinFoto from '../NoticiaSinFoto';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Opinion() {
     const noticias = [
@@ -26,6 +27,13 @@ function Opinion() {
 
     return (
         <div>
+            <Helmet>
+                <title>HorizonteNoticias | Opinion</title>
+                <meta name="description" content="Enterate de las opiniones y análisis sobre temas de interés político y social. Descubre diferentes perspectivas sobre la actualidad y debates en profundidad sobre temas relevantes en México." />
+                <link rel="canonical" href="https://www.horizontenoticias.com.mx/#/Opinion" />
+                <meta property="og:url" content="https://www.horizontenoticias.com.mx/#/Opinion" />
+                <meta name="keywords" content="noticias, actualidad, información, CDMX, México, política, congreso, nacional, elecciones, gobierno, sociedad, economía, sociedad, cultura, educación, salud, medio ambiente, seguridad, desarrollo, opinión, análisis, Claudia Sheinbaum, Xochitl Galvez" />
+             </Helmet>
             <div className='flex flex-col items-center pt-4'>
                 <div>
                     <h1 className='text-5xl pb-4'>Opinion</h1>

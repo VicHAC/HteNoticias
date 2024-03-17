@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import HtmlViewer from './HtmlViewer';
 import Autor from './Autor';
+import { Helmet } from 'react-helmet';
 
 const Nota = () => {
   const { id } = useParams(); // Obtener el ID de la noticia de los parámetros de la URL
@@ -12,7 +13,7 @@ const Nota = () => {
   switch (id) {
     case 'C14':
       titulo = "GPPRI denuncia clima de violencia preelectoral y agresiones en Cuajimalpa, y responsabiliza a exalcalde Adrián Ruvalcaba";
-      fecha = "14 de Marzo de 202";
+      fecha = "14 de Marzo de 2024";
       autorImagen = "Cortesia";
       imagen = "C14.jpeg";
       autorTexto = "";
@@ -256,8 +257,40 @@ const Nota = () => {
       texto = "";
   }
   
+  // Función para formatear el título de la noticia para la URL
+  const formatTitleForURL = (title) => {
+    // Reemplazar espacios por guiones
+    let formattedTitle = title.replace(/ /g, '-');
+    // Eliminar acentos
+    formattedTitle = formattedTitle.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return formattedTitle;
+  };
+
+  // Extraer las palabras clave del título
+  const extractKeywordsFromTitle = (title) => {
+    // Eliminar palabras comunes y caracteres especiales
+    const commonWords = ['tras', 'cuyo','irá','ante','al', 'del', 'dar', 'como','se', 'desde','a','sus','las','los','e', 'u', 'el', 'la', 'de', 'en', 'para', 'con', 'y', 'o', 'que', 'es', 'un', 'una', 'por', 'más'];
+    // Función para limpiar los caracteres especiales alrededor de una palabra
+    const cleanWord = (word) => {
+      return word.replace(/[^a-zA-Z0-9áéíóúüÁÉÍÓÚÜñÑ]/g, ''); // Eliminar caracteres especiales
+    };
+    // Separar el título en palabras y filtrar palabras comunes
+    const words = title.split(' ').map(cleanWord).filter(word => !commonWords.includes(word.toLowerCase()));
+    // Limitar a las primeras 15 palabras clave
+    return words.slice(0, 15).join(', ');
+  };
+
   return (
     <div className='flex flex-col items-center'>
+      <Helmet>
+        <title>{titulo}</title>
+        <meta name="description" content={titulo} />  
+        <meta property="og:image" content={imagen} />
+        <meta property="og:title" content={titulo} />
+        <link rel="canonical" href={`https://www.horizontenoticias.com.mx/#/Nota/${id}/${formatTitleForURL(titulo)}`} />
+        <meta property="og:url" content={`https://www.horizontenoticias.com.mx/#/Nota/${id}/${formatTitleForURL(titulo)}`} />
+        <meta name="keywords" content={extractKeywordsFromTitle(titulo)} />
+      </Helmet>
       <div className='lg:w-3/4 md:w-5/6 md:px-0 px-3'>
         <div className='py-4'>
           <h1 className='md:text-3xl text-2xl text-justify font-bold'>{titulo}</h1>
@@ -281,7 +314,7 @@ const Nota = () => {
                 <img 
                   className="w-full h-full object-cover"
                   src={`Img/${imagen}`}
-                  alt="imagen"
+                  alt={titulo}
                 />
               </div>
             }

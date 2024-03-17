@@ -1,6 +1,7 @@
 import React from 'react';
 import NoticiaGeneral from '../NoticiaGeneral';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Cdmx() {
 
@@ -107,6 +108,13 @@ function Cdmx() {
 
     return (
         <div>
+            <Helmet>
+                <title>HorizonteNoticias | CDMX</title>
+                <meta name="description" content="Enterate de las últimas noticias desde la Ciudad de México. Mantente al tanto de los acontecimientos más relevantes de la política local, así como temas de interés para la comunidad capitalina" />
+                <link rel="canonical" href="https://www.horizontenoticias.com.mx/#/Cdmx" />
+                <meta property="og:url" content="https://www.horizontenoticias.com.mx/#/Cdmx" />
+                <meta name="keywords" content="noticias, actualidad, información, CDMX, México, política, congreso, nacional, elecciones, gobierno, sociedad, economía, sociedad, cultura, educación, salud, medio ambiente, seguridad, desarrollo, opinión, análisis, Claudia Sheinbaum, Xochitl Galvez" />
+             </Helmet>
             <div className='flex flex-col items-center pt-4'>
                 <div>
                     <h1 className='text-5xl pb-4'>CDMX</h1>

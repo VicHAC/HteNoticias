@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NoticiaPrincipal from '../NoticiaPrincipal'
 import NoticiaPrincipalPeque from '../NoticiaPrincipalPeque'
 import NoticiaGeneral from '../NoticiaGeneral';
+import { Helmet } from 'react-helmet';
 
 function Inicio() {
 
@@ -92,6 +93,13 @@ function Inicio() {
 
   return (
     <div className=''>
+        <Helmet>
+            <title>HorizonteNoticias | Inicio</title>
+            <meta name="description" content="Enterate de las últimas noticias y análisis político desde la Ciudad de México y a nivel nacional." />
+            <link rel="canonical" href="https://www.horizontenoticias.com.mx/" />
+            <meta property="og:url" content="https://www.horizontenoticias.com.mx/" />
+            <meta name="keywords" content="noticias, actualidad, información, CDMX, México, política, congreso, nacional, elecciones, gobierno, sociedad, economía, sociedad, cultura, educación, salud, medio ambiente, seguridad, desarrollo, opinión, análisis, Claudia Sheinbaum, Xochitl Galvez" />
+        </Helmet>
         <div className='flex flex-col items-center pt-4 '>
 
 {/* ################################# NOTICIA PRINCIPAL GRANDE ################################# */}           
