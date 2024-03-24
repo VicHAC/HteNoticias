@@ -1,11 +1,32 @@
 import React from 'react';
 import NoticiaGeneral from '../NoticiaGeneral';
+import NoticiaSinFoto from '../NoticiaSinFoto';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function Cdmx() {
 
     const noticias = [
+        {
+            id: 'C17',
+            titulo: "Entregan constancia a Rita Cecilia Contreras como candidata a diputada local al Congreso de la CDMX",
+            rutaHtml: "C17",
+            rutaImagen: "C17.jpg",
+            fecha: "20 de Marzo de 2024"
+        },
+        {
+            id: 'C16',
+            titulo: "Reconoce Claudia Sheinbaum a Nancy Núñez como la próxima alcaldesa de Azcapotzalco",
+            rutaHtml: "C16",
+            fecha: "19 de Marzo de 2024"
+        },
+        {
+            id: 'C15',
+            titulo: "En el Congreso CDMX, tomaron protesta 8 alcaldesas y alcaldes sustitutos",
+            rutaImagen: "C15-1.jpg",
+            rutaHtml: "C15",
+            fecha: "19 de Marzo de 2024"
+        },
         {
             id: 'C14',
             titulo: "GPPRI denuncia clima de violencia preelectoral y agresiones en Cuajimalpa, y responsabiliza a exalcalde Adrián Ruvalcaba",
@@ -16,7 +37,7 @@ function Cdmx() {
         {
             id: 'C13',
             titulo: "Nancy Núñez se consolida como la preferida de Los Chintololos para llegar a la Alcaldía Azcapotzalco",
-            rutaImagen: "C13Nancy.jpeg",
+            rutaImagen: "C13.jpeg",
             rutaHtml: "C13",
             fecha: "10 de Marzo de 2024"
         },
@@ -73,7 +94,7 @@ function Cdmx() {
         {
             id: 'C4',
             titulo: "Ana Villagrán renuncia al PAN e irá ante el INE a presentar denuncia por violencia política de género",
-            rutaImagen: "C4",
+            rutaImagen: "C4.jpeg",
             rutaHtml: "C4"
         },
         {
@@ -115,7 +136,7 @@ function Cdmx() {
                 <meta property="og:url" content="https://www.horizontenoticias.com.mx/#/Cdmx" />
                 <meta name="keywords" content="noticias, actualidad, información, CDMX, México, política, congreso, nacional, elecciones, gobierno, sociedad, economía, sociedad, cultura, educación, salud, medio ambiente, seguridad, desarrollo, opinión, análisis, Claudia Sheinbaum, Xochitl Galvez" />
              </Helmet>
-            <div className='flex flex-col items-center pt-4'>
+             <div className='flex flex-col items-center pt-4'>
                 <div>
                     <h1 className='text-5xl pb-4'>CDMX</h1>
                 </div>
@@ -123,7 +144,11 @@ function Cdmx() {
                     {noticias.map((noticia, index) => (
                         <div key={index} className='md:px-0 px-2'>
                             <Link to={`/Nota/${noticia.id}/${formatTitleForURL(noticia.titulo)}`}>
-                                <NoticiaGeneral imagen={noticia.rutaImagen} titulo={noticia.titulo} rutaHtml={noticia.rutaHtml} />
+                                {noticia.rutaImagen ? (
+                                    <NoticiaGeneral imagen={noticia.rutaImagen} titulo={noticia.titulo} rutaHtml={noticia.rutaHtml} />
+                                ) : (
+                                    <NoticiaSinFoto titulo={noticia.titulo} rutaHtml={noticia.rutaHtml} />
+                                )}
                             </Link>
                         </div>
                     ))}

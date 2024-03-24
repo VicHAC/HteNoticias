@@ -36,9 +36,9 @@ const Navbar = ({ toggle }) => {
         <Link to='/Nacional' className='p-4'>
           Nacional
         </Link>
-        <Link to='/Salud' className='p-4'>
+        {/*<Link to='/Salud' className='p-4'>
           Salud
-        </Link>
+        </Link>*/}
         <Link to='/Opinion' className='p-4'>
           Opinion
         </Link>

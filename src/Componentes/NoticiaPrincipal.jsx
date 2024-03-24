@@ -11,7 +11,7 @@ function NoticiaPrincipal({ imagen, titulo }) {
         />
       </div>
       <div className='w-full p-1 flex-1'>
-        <h1 className='md:text-left text-justify text-lg font-bold'>{titulo}</h1>
+        <h1 className='md:text-left text-justify text-lg font-semibold'>{titulo}</h1>
       </div>
     </div>
   );

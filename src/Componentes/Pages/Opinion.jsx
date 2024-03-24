@@ -6,6 +6,15 @@ import { Helmet } from 'react-helmet';
 function Opinion() {
     const noticias = [
         {
+            id: 'O2',
+            titulo: 'Inseguridad, bandera de oposición que usaría para desconocer resultados electorales',
+            texto: "O2",
+            nombreDeLaColumna: "Café con Adorno",
+            autorDeLaNota: "Raúl Adorno Jiménez",
+            fotoDelAutor: "RaulAdorno.jpeg",
+            fecha: '21 de Marzo de 2024'
+        },
+        {
             id: 'O1',
             titulo: 'Programas sociales ¿bandera de la oposición?',
             texto: "O1",
@@ -48,6 +57,7 @@ function Opinion() {
                                     nombreColumna={noticia.nombreDeLaColumna} 
                                     notaAutor={noticia.autorDeLaNota} 
                                     foto={noticia.fotoDelAutor}
+                                    fecha={noticia.fecha}
                                 />
                             </Link>
                         </div>

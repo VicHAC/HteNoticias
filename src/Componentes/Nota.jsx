@@ -7,15 +7,45 @@ import { Helmet } from 'react-helmet';
 const Nota = () => {
   const { id } = useParams(); // Obtener el ID de la noticia de los parámetros de la URL
 
-  let titulo, imagen, texto, autorImagen, autorTexto, fecha, autorRaul, columna, foto;
+  let titulo, imagenPrincipal, imagenSecundaria1, texto, autorImagen, autorTexto, fecha, autorRaul, columna, foto;
 
   // Switch-case para determinar la información según el ID
   switch (id) {
+    case 'C17':
+      titulo = "Entregan constancia a Rita Cecilia Contreras como candidata a diputada local al Congreso de la CDMX";
+      fecha = "20 de Marzo de 2024";
+      autorImagen = "Cortesia";
+      imagenPrincipal = "C17.jpg";
+      imagenSecundaria1 = "";
+      autorTexto = "";
+      texto = "C17.html";
+      break;
+
+    case 'C16':
+      titulo = "Reconoce Claudia Sheinbaum a Nancy Núñez como la próxima alcaldesa de Azcapotzalco";
+      fecha = "19 de Marzo de 2024";
+      autorImagen = "";
+      imagenPrincipal = "";
+      imagenSecundaria1 = ""
+      autorTexto = "";
+      texto = "C16.html";
+      break;
+
+    case 'C15':
+      titulo = "En el Congreso CDMX, tomaron protesta 8 alcaldesas y alcaldes sustitutos";
+      fecha = "19 de Marzo de 2024";
+      autorImagen = "Cortesia";
+      imagenPrincipal = "C15-1.jpg";
+      imagenSecundaria1 = "C15-2.jpg"
+      autorTexto = "";
+      texto = "C15.html";
+      break;
+
     case 'C14':
       titulo = "GPPRI denuncia clima de violencia preelectoral y agresiones en Cuajimalpa, y responsabiliza a exalcalde Adrián Ruvalcaba";
       fecha = "14 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "C14.jpeg";
+      imagenPrincipal = "C14.jpeg";
       autorTexto = "";
       texto = "C14.html";
       break;
@@ -24,7 +54,7 @@ const Nota = () => {
       titulo = "Nancy Núñez se consolida como la preferida de Los Chintololos para llegar a la Alcaldía Azcapotzalco";
       fecha = "10 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "C13.jpeg";
+      imagenPrincipal = "C13.jpeg";
       autorTexto = "";
       texto = "C13.html";
       break;
@@ -33,7 +63,7 @@ const Nota = () => {
       titulo = "Demandan a Santiago Taboada acciones para frenar y prevenir todo tipo de violencia hacia las mujeres";
       fecha = "8 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "C12.jpeg";
+      imagenPrincipal = "C12.jpeg";
       autorTexto = "";
       texto = "C12.html";
       break;
@@ -42,7 +72,7 @@ const Nota = () => {
       titulo = "PAN exige dar de baja a diputados faltistas de la Comisión de Gestión Integral del Agua";
       fecha = "29 de Febrero 2024";
       autorImagen = "Cortesia";
-      imagen = "C11.jpeg";
+      imagenPrincipal = "C11.jpeg";
       autorTexto = "";
       texto = "C11.html";
       break;
@@ -51,7 +81,7 @@ const Nota = () => {
       titulo = 'Jóvenes que apoyan a Claudia Sheinbaum presentan la campaña "Por La Primera Presidenta de México"';
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C10.jpeg";
+      imagenPrincipal = "C10.jpeg";
       autorTexto = "";
       texto = "C10.html";
       break;
@@ -60,7 +90,7 @@ const Nota = () => {
       titulo = "Integra Fernando Mercado equipo de trabajo para la elaboración de proyecto de plan de gobierno en La Magdalena Contreras";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C9.jpeg";
+      imagenPrincipal = "C9.jpeg";
       autorTexto = "";
       texto = "C9.html";
       break;
@@ -69,7 +99,7 @@ const Nota = () => {
       titulo = "Proyecto de gobierno de Clara Brugada humanista e incluyente: Sebastián Ramírez";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C8.jpeg";
+      imagenPrincipal = "C8.jpeg";
       autorTexto = "";
       texto = "C8.html";
       break;
@@ -78,7 +108,7 @@ const Nota = () => {
       titulo = "Taboada prioriza en sus ejes de gobierno a las mujeres";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C7.jpeg";
+      imagenPrincipal = "C7.jpeg";
       autorTexto = "";
       texto = "C7.html";
       break;
@@ -87,7 +117,7 @@ const Nota = () => {
       titulo = "La comunidad de Azcapotzalco respalda a la Doctora Claudia Sheinbaum rumbo a la Presidencia de México";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C6.jpeg";
+      imagenPrincipal = "C6.jpeg";
       autorTexto = "";
       texto = "C6.html";
       break;
@@ -96,7 +126,7 @@ const Nota = () => {
       titulo = "Registra PRD CDMX a Rita Contreras Ocampo como su candidata al Distrito 12 local de la Alcaldía Cuauhtémoc";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C5.jpeg";
+      imagenPrincipal = "C5.jpeg";
       autorTexto = "";
       texto = "C5.html";
       break;
@@ -105,7 +135,7 @@ const Nota = () => {
       titulo = "Ana Villagrán renuncia al PAN e irá ante el INE a presentar denuncia por violencia política de género";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C4.jpeg";
+      imagenPrincipal = "C4.jpeg";
       autorTexto = "";
       texto = "C4.html";
       break;
@@ -114,7 +144,7 @@ const Nota = () => {
       titulo = "Tras denuncia ciudadana, Sandra Cuevas ordena retiro de puesto cuyo dueño, con cuchillo en mano, intentó atacar a una mujer";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C3.jpeg";
+      imagenPrincipal = "C3.jpeg";
       autorTexto = "";
       texto = "C3.html";
       break;
@@ -123,7 +153,7 @@ const Nota = () => {
       titulo = "Federico Chávez señala a Sebastián Ramírez de ordenar el acoso político a vecinos de alcaldías de oposición";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C2.jpeg";
+      imagenPrincipal = "C2.jpeg";
       autorTexto = "";
       texto = "C2.html";
       break;
@@ -132,7 +162,7 @@ const Nota = () => {
       titulo = "Diputada gestiona venta accesible de tinacos para la ciudadanía";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "C1.jpeg";
+      imagenPrincipal = "C1.jpeg";
       autorTexto = "";
       texto = "C1.html";
       break;
@@ -142,7 +172,7 @@ const Nota = () => {
       titulo = "Urge que alcaldías destinen un porcentaje de su presupuesto para esterilizar perros y gatos callejeros: Javier Ramos";
       fecha = "Fecha de la Noticia 1";
       autorImagen = "Cortesia";
-      imagen = "N1.jpeg";
+      imagenPrincipal = "N1.jpeg";
       autorTexto = "";
       texto = "N1.html";
       break;
@@ -151,7 +181,7 @@ const Nota = () => {
       titulo = "Incluido el Presidente de la República, ningún político ganará más de 50 mil pesos mensuales, primera propuesta de Sandra Cueva al Senado";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "N2.jpeg";
+      imagenPrincipal = "N2.jpeg";
       autorTexto = "";
       texto = "N2.html";
       break;
@@ -160,7 +190,7 @@ const Nota = () => {
       titulo = "Vamos por más democracia, por más libertades y más justicia para el pueblo de México: Claudia Sheinbaum desde San Pedro Cholula, Puebla";
       fecha = "10 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "N3.jpeg";
+      imagenPrincipal = "N3.jpeg";
       autorTexto = "";
       texto = "N3.html";
       break;
@@ -169,7 +199,7 @@ const Nota = () => {
       titulo = "Este 2 de junio será una fiesta democrática gracias al pueblo de México: Claudia Sheinbaum llama a defender la democracia y a la 4T en las urnas";
       fecha = "12 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "N4.jpeg";
+      imagenPrincipal = "N4.jpeg";
       autorTexto = "";
       texto = "N4.html";
       break;
@@ -178,7 +208,7 @@ const Nota = () => {
       titulo = "Con la 4T queremos seguir desarrollando a Yucatán y al país: Claudia Sheinbaum garantiza bienestar para todos los yucatecos con la llegada de la transformación";
       fecha = "14 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "N5.jpg";
+      imagenPrincipal = "N5.jpg";
       autorTexto = "";
       texto = "N5.html";
       break;
@@ -187,17 +217,28 @@ const Nota = () => {
       titulo = "Apoyar al Sureste es justicia social, justicia territorial y justicia histórica: Claudia Sheinbaum desde Paraíso, Tabasco";
       fecha = "16 de Marzo de 2024";
       autorImagen = "Cortesia";
-      imagen = "N6.jpg";
+      imagenPrincipal = "N6.jpg";
       autorTexto = "";
       texto = "N6.html";
       break;
 
       // NOTICIAS DE OPINION
+      case 'O2':
+      titulo = "Inseguridad, bandera de oposición que usaría para desconocer resultados electorales";
+      fecha = "21 de Marzo de 2024";
+      autorImagen = "";
+      imagenPrincipal = "";
+      texto = "O2.html";
+      autorRaul = "Raúl Adorno Jiménez";
+      columna = "Café con Adorno";
+      foto = "RaulAdorno.jpeg"
+      break;
+
       case 'O1':
       titulo = "Programas sociales ¿bandera de la oposición?";
       fecha = "";
       autorImagen = "";
-      imagen = "";
+      imagenPrincipal = "";
       texto = "O1.html";
       autorRaul = "Raúl Adorno Jiménez";
       columna = "Café con Adorno";
@@ -209,7 +250,7 @@ const Nota = () => {
       titulo = "Se Registra Octavio Rivero Como Candidato de MORENA a la Alcaldía de Milpa Alta";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "registraOctavio.jpeg";
+      imagenPrincipal = "registraOctavio.jpeg";
       autorTexto = "";
       texto = "RegistraOctavio.html";
       break;
@@ -218,7 +259,7 @@ const Nota = () => {
       titulo = "Lineamientos garantizan en el PJCDMX respeto a derechos humanos de indígenas";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "lineamientosRespeto.jpeg";
+      imagenPrincipal = "lineamientosRespeto.jpeg";
       autorTexto = "";
       texto = "LineamientosRespeto.html";
       break;
@@ -227,7 +268,7 @@ const Nota = () => {
       titulo = "Organizaciones anti taurinos reclaman avanzar con dictamen que prohíbe esta práctica en CDMX";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "organizacionesAntitaurinos.jpeg";
+      imagenPrincipal = "organizacionesAntitaurinos.jpeg";
       autorTexto = "";
       texto = "OrganizacionesAntitaurinos.html";
       break;
@@ -236,7 +277,7 @@ const Nota = () => {
       titulo = 'La CDMX debe aplicar la estrategia de seguridad "blindar" que implementó Santiago Taboada en Benito Juárez: Lía Limón';
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "seguridadLiaLimon.jpeg";
+      imagenPrincipal = "seguridadLiaLimon.jpeg";
       autorTexto = "";
       texto = "SeguridadLiaLimon.html";
       break;
@@ -245,7 +286,7 @@ const Nota = () => {
       titulo = "Solicita PAN conocer déficit de tarjetas inteligentes en el Metro";
       fecha = "";
       autorImagen = "Cortesia";
-      imagen = "deficitTarjetasMetro.jpeg";
+      imagenPrincipal = "deficitTarjetasMetro.jpeg";
       autorTexto = "";
       texto = "DeficitTarjetasMetro.html";
       break;
@@ -253,7 +294,7 @@ const Nota = () => {
 
     default:
       titulo = "Noticia no encontrada";
-      imagen = "";
+      imagenPrincipal = "";
       texto = "";
   }
   
@@ -285,20 +326,15 @@ const Nota = () => {
       <Helmet>
         <title>{titulo}</title>
         <meta name="description" content={titulo} />  
-        <meta property="og:image" content={imagen} />
+        <meta property="og:image" content={imagenPrincipal} />
         <meta property="og:title" content={titulo} />
         <link rel="canonical" href={`https://www.horizontenoticias.com.mx/#/Nota/${id}/${formatTitleForURL(titulo)}`} />
         <meta property="og:url" content={`https://www.horizontenoticias.com.mx/#/Nota/${id}/${formatTitleForURL(titulo)}`} />
         <meta name="keywords" content={extractKeywordsFromTitle(titulo)} />
       </Helmet>
       <div className='lg:w-3/4 md:w-5/6 md:px-0 px-3'>
-        <div className='py-4'>
+        <div className='pt-4 pb-2'>
           <h1 className='md:text-3xl text-2xl text-justify font-bold'>{titulo}</h1>
-        </div>
-        <div className='text-right'>
-            {autorRaul && <div><Autor nombreDeLaColumna={columna}
-            autorDeLaNota={autorRaul}
-            fotoDelAutor={foto}/></div>}
         </div>
         <div className='flex justify-between'>
           <div className='text-right'>
@@ -309,18 +345,34 @@ const Nota = () => {
           </div>
         </div>
         <div className='text-right'>
-            {imagen && 
+            {autorRaul && <div><Autor nombreDeLaColumna={columna}
+            autorDeLaNota={autorRaul}
+            fotoDelAutor={foto}/></div>}
+        </div>
+        <div className='pb-4'>
+            {imagenPrincipal && 
               <div className='w-full h-96 overflow-hidden'>
                 <img 
                   className="w-full h-full object-cover"
-                  src={`Img/${imagen}`}
+                  src={`Img/${imagenPrincipal}`}
                   alt={titulo}
                 />
               </div>
             }
         </div>
-        <div className='py-4 font-mono text-justify'>
+        <div className='pt-1 pb-4 font-mono text-justify'>
           {texto && <div><HtmlViewer htmlFilePath={`Bol/${texto}`}/></div>}
+        </div>
+        <div className='pb-4'>
+            {imagenSecundaria1 && 
+              <div className='w-full h-96 overflow-hidden'>
+                <img 
+                  className="w-full h-full object-cover"
+                  src={`Img/${imagenSecundaria1}`}
+                  alt={titulo}
+                />
+              </div>
+            }
         </div>
       </div>
     </div>

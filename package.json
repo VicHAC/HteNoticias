@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.7.2",
     "debug": "^4.3.1",
     "gh-pages": "^6.1.1",
     "htmlparser2": "^9.1.0",
